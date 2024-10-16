@@ -1,0 +1,177 @@
+
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        13.15.0                                                                        │
+  │ Browser:        Electron 118 (headless)                                                        │
+  │ Node Version:   v20.12.2 (C:\Program Files\nodejs\node.exe)                                    │
+  │ Specs:          1 found (login.cy.js)                                                          │
+  │ Searched:       C:\Users\A.Ghavidel\Desktop\test-plans\cypress\e2e\login.cy.js                 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  login.cy.js                                                                     (1 of 1)
+
+
+  login to iHotel
+Visiting site
+Visiting site
+Checking title
+Filling email
+Filling password
+Submitting login form
+Finding hotels list in the menu
+Checking URL after navigation
+Getting total pages number
+Validating table on page 1 of 81
+#1 copy button and modal checked
+#2 copy button and modal checked
+#3 copy button and modal checked
+#4 copy button and modal checked
+#5 copy button and modal checked
+#6 copy button and modal checked
+#7 copy button and modal checked
+#8 copy button and modal checked
+#9 copy button and modal checked
+#10 copy button and modal checked
+#11 copy button and modal checked
+#12 copy button and modal checked
+#13 copy button and modal checked
+#14 copy button and modal checked
+#15 copy button and modal checked
+#16 copy button and modal checked
+#17 copy button and modal checked
+#18 copy button and modal checked
+#19 copy button and modal checked
+#20 copy button and modal checked
+#21 copy button and modal checked
+#22 copy button and modal checked
+#23 copy button and modal checked
+#24 copy button and modal checked
+#25 copy button and modal checked
+#26 copy button and modal checked
+#27 copy button and modal checked
+#28 copy button and modal checked
+#29 copy button and modal checked
+#30 copy button and modal checked
+Page 1 checked successfully
+Validating table on page 2 of 81
+#31 copy button and modal checked
+#32 copy button and modal checked
+#33 copy button and modal checked
+#34 copy button and modal checked
+#35 copy button and modal checked
+#36 copy button and modal checked
+#37 copy button and modal checked
+#38 copy button and modal checked
+#39 copy button and modal checked
+#40 copy button and modal checked
+#41 copy button and modal checked
+#42 copy button and modal checked
+#43 copy button and modal checked
+#44 copy button and modal checked
+#45 copy button and modal checked
+#46 copy button and modal checked
+#47 copy button and modal checked
+#48 copy button and modal checked
+#49 copy button and modal checked
+#50 copy button and modal checked
+#51 copy button and modal checked
+#52 copy button and modal checked
+#53 copy button and modal checked
+#54 copy button and modal checked
+#55 copy button and modal checked
+#56 copy button and modal checked
+#57 copy button and modal checked
+#58 copy button and modal checked
+#59 copy button and modal checked
+#60 copy button and modal checked
+Page 2 checked successfully
+Validating table on page 3 of 81
+#61 copy button and modal checked
+    1) should login with correct user credentials and navigate through the hotel list
+
+
+  0 passing (1m)
+  1 failing
+
+  1) login to iHotel
+       should login with correct user credentials and navigate through the hotel list:
+     CypressError: Timed out retrying after 4000ms: `cy.children()` failed because the page updated as a result of this command, but you tried to continue the command chain. The subject is no longer attached to the DOM, and Cypress cannot requery the page after commands such as `cy.children()`.
+
+Common situations why this happens:
+  - Your JS framework re-rendered asynchronously
+  - Your app code reacted to an event firing and removed the element
+
+You can typically solve this by breaking up a chain. For example, rewrite:
+
+> `cy.get('button').click().should('have.class', 'active')`
+
+to
+
+> `cy.get('button').as('btn').click()`
+> `cy.get('@btn').should('have.class', 'active')`
+
+https://on.cypress.io/element-has-detached-from-dom
+      at isAttached (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:145030:58)
+      at validateType (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:144900:9)
+      at Object.isType (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:144935:7)
+      at <unknown> (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:135300:24)
+      at Object.subjectFn (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:143919:16)
+      at $Cy.verifyUpcomingAssertions (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:143258:31)
+      at onRetry (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:143910:15)
+      at tryCatcher (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:1807:23)
+      at Promise.attempt.Promise.try (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:4315:29)
+      at whenStable (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:143797:68)
+      at <unknown> (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:143738:14)
+      at tryCatcher (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:1807:23)
+      at Promise._settlePromiseFromHandler (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:1519:31)
+      at Promise._settlePromise (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:1576:18)
+      at Promise._settlePromise0 (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:1621:10)
+      at Promise._settlePromises (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:1701:18)
+      at Promise._fulfill (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:1645:18)
+      at <unknown> (https://ihotel.ihogroup.ir/__cypress/runner/cypress_runner.js:5450:46)
+  From Your Spec Code:
+      at Context.eval (webpack://test-plans/./cypress/e2e/login.cy.js:51:49)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      0                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     1 minute, 28 seconds                                                             │
+  │ Spec Ran:     login.cy.js                                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  C:\Users\A.Ghavidel\Desktop\test-plans\cypress\screenshots\login.cy.js\login to      (1280x720)
+     iHotel -- should login with correct user credentials and navigate through the ho               
+     tel list (failed).png                                                                          
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  login.cy.js                              01:28        1        -        1        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                     01:28        1        -        1        -        -  
+

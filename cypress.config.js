@@ -1,13 +1,16 @@
 const { defineConfig } = require("cypress");
-
+const installLogsCollector = require('cypress-log-to-output').install;
 module.exports = defineConfig({
+  projectId: 'how99y',
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      on('task', {
+        log(message) {
+          console.log(message);
+          return null;
+        }
+      });
+      return config;
     },
-    viewportWidth: 1920,
-    viewportHeight: 1080,
-    chromeWebSecurity: false, // Disables Chrome's web security to allow cross-origin behavior
-    experimentalSessionAndOrigin: true, // Enables experimental support for session and origin management
   },
 });
